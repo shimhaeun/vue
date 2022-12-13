@@ -11,6 +11,11 @@
     <div id="main">
         <!-- sTitle 값을 받아서 HTML의 엘리먼트 값으로 변환하여 표시함, 머스태시 사용 -->
         <p>{{ sTitle }}</p>
+        <p>{{ sContent }}</p>
+    </div>
+    <div id="App">
+        <p>{{ sTitle2 }}</p>
+        <p>{{ sContent2 }}</p>
     </div>
     <script>
         // Vue 객체를 생성하여 앱을 초기화하고 시작함
@@ -18,9 +23,18 @@
             el:'#main', // id 선태자인 "main"의 div 앨리먼트와 앱을 연결시켜 구동
             data: {
                 // {{ sTitle }}로 데이터 값을 전달함
-                sTitle:'Hello World!!' 
-            }
+                sTitle:'Hello World!!' ,
+                sContent:'Hello ~~' 
+            },
         });
-    </script>
+        new Vue({
+            el:'#App', // id 선태자인 "main"의 div 앨리먼트와 앱을 연결시켜 구동
+            data: {
+                // {{ sTitle }}로 데이터 값을 전달함
+                sTitle2:'Hello World!!2' ,
+                sContent2:'Hello ~~2' 
+            },
+        });
+        </script>
 </body>
 </html>
