@@ -15,8 +15,9 @@
     <div id="main">
         <!-- v-bind 안에도 자바스크립트 사용 가능하므로 변수와 문장을 연결하여 클래스 이름을 완성하여 연결 -->
         <h1 v-bind:class="sColorName + '_style'">안녕하세요</h1>
+        <input type="text" :value="sDate">
         <!-- 콜론(:) 앞은 생략 가능 -->
-        <input :value="sDate">
+        
     </div>
     <script>
         var gDate_app = new Vue({
