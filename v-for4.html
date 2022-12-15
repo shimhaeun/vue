@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="main">
+        <h2>* 고객 명단</h2>
+        <ul>
+            <li v-for="item in persons">
+                <p>번호 : {{ item.number }}</p>
+                <p>이름 : {{ item.name }}</p>
+                <p>나이 : {{ item.age }}</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var main = new Vue({
+            el:'#main',
+            data:{
+                persons:[
+                    {number : 1, name : '홍길동', age : 20},
+                    {number : 2, name : '이순신', age : 30},
+                    {number : 3, name : '김유신', age : 40}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
