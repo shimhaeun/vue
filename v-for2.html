@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>v-for</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
     <div id="main">
-        <p>{{ sTitle }}</p>
+        <p>fruits의 전체 값 : {{ fruits }}</p>
+        <p v-for="item in fruits">{{ item }}</p>
     </div>
 
     <script>
-        new Vue({
-            el: '#main',
+        var main = new Vue({
+            el:'#main',
             data:{
-                sTitle:'Hello, World!!'
+                fruits:[
+                    { fruitName : '사과', count : 10 },
+                    { fruitName : '배', count : 15 },
+                    { fruitName : '복숭아', count : 20 }
+                ]
             }
         });
     </script>
