@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리스트와 아이콘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.0.96/css/materialdesignicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+</head>
+<body>
+    <div id="app">
+        <v-app>
+            <v-app-bar app color="blue" dark>
+                <!-- 좌측에 메뉴 아이콘 추가 -->
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+                <v-toolbar-title>VueJS List</v-toolbar-title>
+            </v-app-bar>
+            <v-main>
+                <v-container>
+                    <v-card>
+                        <v-list two-line key="1">
+                            <v-list-item @click="">
+                                <v-list-item-avatar>
+                                    <v-icon class="red white--text">account_balance</v-icon>
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <v-list-item-title>회사 소개</v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-action>
+                                    <v-btn icon>
+                                        <v-icon color="grey">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-list-item-action>
+                            </v-list-item>
+                        </v-list>
+
+                        <v-list two-line key="2">
+                            <v-list-item @click="">
+                                <v-list-item-avatar>
+                                    <v-icon class="green white--text">photo</v-icon>
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <v-list-item-title>제품 이미지</v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-action>
+                                    <v-btn icon>
+                                        <v-icon color="grey">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-list-item-action>
+                            </v-list-item>
+                        </v-list>
+
+                        <v-list two-line key="3">
+                            <v-list-item @click="">
+                                <v-list-item-avatar>
+                                    <v-icon class="yellow white--text">movie</v-icon>
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <v-list-item-title>홍보 동영상</v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-action>
+                                    <v-btn icon>
+                                        <v-icon color="grey">keyboard_arrow_right</v-icon>
+                                    </v-btn>
+                                </v-list-item-action>
+                            </v-list-item>
+                        </v-list>
+                        
+                    </v-card>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify()
+        })
+    </script>
+</body>
+</html>
