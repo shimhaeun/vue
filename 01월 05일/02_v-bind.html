@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue_style{
+            color:teal
+        }
+        body, h2, input{font-size:30px}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2 class="blue_style">HTML class attribute</h2>
+        <h2 v-bind:class="sColorName">v-bind</h2>
+        <h2 v-bind:class="addColorName+'_style'">연결 연산자</h2>
+
+        <p>value <input type="text" value="2023"></p>
+        <p>v-bind <input type="text" :value="sDate"></p>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                sColorName : 'blue_style',
+                addColorName : 'blue',
+                sDate : new Date().getFullYear()
+            }
+        });
+    </script>
+</body>
+</html>

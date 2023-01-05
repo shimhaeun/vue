@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red_style{color:tomato}
+        .blue_style{color:teal}
+        .green_style{color:greenyellow}
+        body, h2, input{font-size:30px}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{ sTitle }}</h2>
+        <p><input type="text" v-model:value="sTitle"></p>
+        <hr>
+        <h2 :class="sColor+'_style'">Hello, Vue JS</h2>
+        <p><input type="text" v-model:value="sColor" placeholder="red, blue, green"></p>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                sTitle : 'Hello',
+                sColor : 'red'
+            }
+        });
+    </script>
+</body>
+</html>

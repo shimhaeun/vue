@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{ sTitle }}</h2>
+        <button type="button" v-on:click="fnChangeMsg">이 버튼을 클릭하면 메세지가 변경됩니다.</button>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                sTitle : 'Hello, Vue JS!!!'
+            },
+            methods:{
+                fnChangeMsg(){
+                    // alert("TEST")
+                    // console.log("TEST")
+                    // sTitle : '안녕하세요!!!' // 함수 내에서 사용할 수 있는 변수
+                    this.sTitle = '안녕하세요!!!' // vue 객체 내에 있는 변수 선언 시 this 사용
+                }
+            }
+        });
+    </script>
+</body>
+</html>
